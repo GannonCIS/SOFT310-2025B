@@ -1,0 +1,12 @@
+plugins { id 'java' }
+group = 'org.example'
+version = '1.0'
+repositories { mavenCentral() }
+dependencies {
+    implementation 'javazoom:jlayer:1.0.1'                  // playing
+    implementation 'com.googlecode.soundlibs:mp3spi:1.9.5-1' // MP3 for javax.sound.sampled
+    implementation 'com.googlecode.soundlibs:tritonus-share:0.3.7-3'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
+
+test { useJUnitPlatform() }
