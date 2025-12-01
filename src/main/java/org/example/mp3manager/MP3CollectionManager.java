@@ -84,7 +84,7 @@ public class MP3CollectionManager {
 				 }
 				 
 				 if((index - integer) >= 0)
-					 index -= integer; //updates current index
+					 index -= integer;
 				 else
 					 System.out.println("start of the list");
 			}
@@ -127,7 +127,7 @@ public class MP3CollectionManager {
 					 second = tokenizer.nextToken();
 				 }
 				 int numOfIter = tokenizer.countTokens();
-				 for (int i = 0; i<= numOfIter-1; i++)//this loop handles strings with multiple tokens
+				 for (int i = 0; i<= numOfIter-1; i++)
 				 {
 					 if(i > 0 && i <= numOfIter-1)
 						 name+=" ";

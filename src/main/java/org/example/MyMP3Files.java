@@ -23,7 +23,6 @@ public class MyMP3Files {
 
         SimpleArrayList<Mp3File> mp3List = new SimpleArrayList<>();
 
-        // Собираем только *.mp3
         for (File f : list) {
             if (f.getAbsolutePath().toLowerCase().endsWith(".mp3")) {
                 mp3List.add(new Mp3File(f.getAbsolutePath()));
