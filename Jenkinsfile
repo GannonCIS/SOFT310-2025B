@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+ 
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Cleaning build..'
+                sh './gradlew clean'
+                echo 'Starting build..'
+                sh './gradlew build'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Starting testing..'
+                sh './gradlew test'
+            }
+            post {
+                always {
+                    junit 'build/test-results/test/*.xml'
+                    publishHTML([
+                        reportDir: 'build/reports/tests/test',
+                        reportFiles: 'index.html',
+                        reportName: 'Test Report',
+                        allowMissing: true,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true
+                    ])
+                }
+            }
+        }
+    }
+}
