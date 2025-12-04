@@ -19,10 +19,10 @@ class BVA_IndexTest {
 
         assertEquals(5, list.get(5));
 
+        assertEquals(8, list.get(8));
+
         assertEquals(9, list.get(9));
 
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(10));
-
-        assertThrows(IndexOutOfBoundsException.class, () -> list.get(11));
     }
 }

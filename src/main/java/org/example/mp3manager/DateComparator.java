@@ -30,6 +30,4 @@ public class DateComparator implements Comparator<Mp3File> {
 		else 
 			return 1;
 	}
-
-
 }
